@@ -7,12 +7,12 @@
 Чтобы установить все зависимости, выполните из корня репозитория
 следующий код. 
 
-```Bash
+```shell
 pipenv install
 ```
 
 Остаётся запустить Jupyter.
-```Bash
+```shell
 pipenv run jupyter
 ```
 
