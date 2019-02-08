@@ -13,7 +13,7 @@ pipenv install
 
 Остаётся запустить Jupyter.
 ```shell
-pipenv run jupyter
+pipenv run jupyter notebook
 ```
 
 **NB** Содержимое ноутбуков можно смотреть прямо на GitHub.
