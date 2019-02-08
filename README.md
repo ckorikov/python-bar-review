@@ -21,4 +21,4 @@ pipenv run jupyter notebook
 ## Содержание
 
 1. [Вложенные функции, замыкания и декораторы](01-nested_functions-closures-decorators.ipynb)
-2. [Коллекции и функциональное программирование — WIP](#)
+2. [Коллекции и функциональное программирование — WIP](02-collections-functional_programming.ipynb)
