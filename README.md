@@ -22,4 +22,7 @@ pipenv run jupyter notebook
 
 1. [Вложенные функции, замыкания и декораторы](01-nested_functions-closures-decorators.ipynb)
 2. [Итераторы, генераторы и функциональное программирование](02-iterators-generators-functional_programming.ipynb)
-3. [TBD](#)
+3. [Коллекции — WIP](#)
+
+## Идеи для занятий (файл может меняться)
+<img src="syllabus/syllabus.png" width="100%"/>
