@@ -11,6 +11,7 @@ numpy = "*"
 pandas = "*"
 matplotlib = "*"
 seaborn = "*"
+sklearn = "*"
 
 [requires]
 python_version = "3.7"
