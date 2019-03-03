@@ -16,7 +16,13 @@ pipenv install
 pipenv run jupyter notebook
 ```
 
-**NB** Содержимое ноутбуков можно смотреть прямо на GitHub.
+Альтернативный вариант — использовать [docker](https://www.docker.com).
+Для этого из подкаталога *docker* надо вызвать следующую команду.
+```shell
+docker-compose up
+```
+
+**NB!** Содержимое ноутбуков можно смотреть прямо на GitHub.
 
 ## Содержание
 
