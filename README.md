@@ -35,4 +35,5 @@ docker-compose up
 5. [Конкурентное программирование — WIP](05-concurrency.ipynb)
 
 ## Идеи для занятий (файл может меняться)
+
 <img src="syllabus/syllabus.png" width="100%"/>
