@@ -2,22 +2,24 @@
 
 Набор заметок о синтаксисе языка Python.
 Каждая заметка — отдельный [Jupyter notebook](https://jupyter.org).
-Для интерактивного просмотра нужен Jupyter.
+Для интерактивного просмотра нужен Jupyter Lab.
 
 Чтобы установить все зависимости, выполните из корня репозитория
-следующий код. 
+следующий код.
 
 ```shell
 pipenv install
 ```
 
-Остаётся запустить Jupyter.
+Остаётся запустить Jupyter Lab.
+
 ```shell
-pipenv run jupyter notebook
+pipenv run jupyter lab
 ```
 
 Альтернативный вариант — использовать [docker](https://www.docker.com).
 Для этого из подкаталога *docker* надо вызвать следующую команду.
+
 ```shell
 docker-compose up
 ```
