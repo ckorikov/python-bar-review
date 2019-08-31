@@ -4,16 +4,16 @@
 
 Набор заметок о синтаксисе языка Python.
 Каждая заметка — отдельный [Jupyter notebook](https://jupyter.org).
-Для интерактивного просмотра нужен Jupyter Lab.
+Для интерактивного просмотра нужен Jupyter.
 
-Чтобы установить все зависимости, выполните из корня репозитория
-следующий код.
+Чтобы установить все зависимости, сначала выполните из корня репозитория
+команду
 
 ```shell
 pipenv install
 ```
 
-Остаётся запустить Jupyter Lab.
+затем запустите Jupyter Lab.
 
 ```shell
 pipenv run jupyter lab
@@ -34,8 +34,14 @@ docker-compose up
 2. [Итераторы, генераторы и функциональное программирование](02-iterators-generators-functional_programming.ipynb)
 3. [Контейнеры 1](03-containers-1.ipynb)
 4. [Контейнеры 2](04-containers-2.ipynb)
-5. [Конкурентное программирование — WIP](05-concurrency.ipynb)
+
+В работе:
+- [x] [Конкурентное программирование — WIP](05-concurrency.ipynb)
+- [x] [Алгоритмы. Числа — WIP](xx-algorithms-numbers.ipynb)
+- [x] [Алгоритмы. ML — WIP](xx-algorithms-machine_learning.ipynb)
 
 ## Идеи для занятий (файл может меняться)
 
 <img src="syllabus/syllabus.png" width="100%"/>
+
+Новые идеи присылайте через [GitHub Issues](issues)
