@@ -1,5 +1,7 @@
 # Python. Bar Review
 
+![Python Bar Review](img/promo.png)
+
 Набор заметок о синтаксисе языка Python.
 Каждая заметка — отдельный [Jupyter notebook](https://jupyter.org).
 Для интерактивного просмотра нужен Jupyter Lab.
