@@ -36,12 +36,13 @@ docker-compose up
 4. [Контейнеры 2](04-containers-2.ipynb)
 
 В работе:
-- [x] [Конкурентное программирование — WIP](05-concurrency.ipynb)
-- [x] [Алгоритмы. Числа — WIP](xx-algorithms-numbers.ipynb)
-- [x] [Алгоритмы. ML — WIP](xx-algorithms-machine_learning.ipynb)
+
+- [ ] [Конкурентное программирование — WIP](05-concurrency.ipynb)
+- [ ] [Алгоритмы. Числа — WIP](xx-algorithms-numbers.ipynb)
+- [ ] [Алгоритмы. ML — WIP](xx-algorithms-machine_learning.ipynb)
 
 ## Идеи для занятий (файл может меняться)
 
 <img src="syllabus/syllabus.png" width="100%"/>
 
-Новые идеи присылайте через [GitHub Issues](issues)
+Новые идеи присылайте через [GitHub Issues](https://github.com/ckorikov/python-bar-review/issues)
