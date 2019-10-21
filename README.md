@@ -26,7 +26,12 @@ pipenv run jupyter lab
 docker-compose up
 ```
 
-**NB!** Содержимое ноутбуков можно смотреть прямо на GitHub.
+**NB!** Содержимое ноутбуков можно смотреть прямо на GitHub или на GitHub Pages.
+
+Для экспорта ноутбуков полезна команда
+```shell
+jupyter nbconvert notebook.ipynb --to html --output notebook.html
+```
 
 ## Содержание
 
