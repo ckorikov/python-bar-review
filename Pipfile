@@ -10,9 +10,8 @@ numpy = "*"
 pandas = "*"
 matplotlib = "*"
 seaborn = "*"
-sklearn = "*"
 watermark = "*"
 jupyterlab = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"
