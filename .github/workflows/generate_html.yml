@@ -16,11 +16,17 @@ jobs:
     - name: Install pipenv
       run: pip install pipenv
     - name: Install requirements
-      run: |
-        pipenv install,
-        pipenv install jupyter_contrib_nbextensions,
+      run:
+        pipenv install
+    - name: Install jupyter_contrib_nbextensions
+      run:
+        pipenv install jupyter_contrib_nbextensions
+    - name: Enable jupyter_contrib_nbextensions
+      run:
         pipenv jupyter contrib nbextension install --user
     - name: Generate html
-      run: |
-        for i in *.ipynb; do pipenv jupyter nbconvert --to html_embed $i; done,
-        mv *.html docs.
+      run:
+        for i in *.ipynb; do pipenv jupyter nbconvert --to html_embed $i; done
+    - name: Move html to docks
+      run:
+        mv *.html docs
