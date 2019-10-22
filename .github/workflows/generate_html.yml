@@ -1,0 +1,24 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install python
+      run: apt-get install -y python3.8
+    - name: Install pipenv
+      run: pip install pipenv
+    - name: Install requirements
+      run: |
+        pipenv install,
+        pipenv install jupyter_contrib_nbextensions,
+        pipenv jupyter contrib nbextension install --user
+    - name: Generate html
+      run: |
+        for i in *.ipynb; do pipenv jupyter nbconvert --to html_embed $i; done,
+        mv *.html docs.
