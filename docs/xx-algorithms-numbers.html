@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8">
 
-<title>01-nested_functions-closures-decorators</title>
+<title>xx-algorithms-numbers</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13085,28 +13085,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Вложенные-функции,-замыкания-и-декораторы">Вложенные функции, замыкания и декораторы<a class="anchor-link" href="#%D0%92%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8,-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B8-%D0%B4%D0%B5%D0%BA%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B">¶</a></h1>
+<h1 id="Алгоритмы.-Числа">Алгоритмы. Числа<a class="anchor-link" href="#%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.-%D0%A7%D0%B8%D1%81%D0%BB%D0%B0">¶</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="1.-Функции">1. Функции<a class="anchor-link" href="#1.-%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8">¶</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Функция</strong> — часть программы, которую можно вызвать из другого места программы.</p>
-<p>Все в Python объекты. И даже функции. Это значит, что у функций есть</p>
-<ul>
-<li>атрибуты</li>
-<li>и методы.</li>
-</ul>
-<p>От остальных объектов функции отличаются тем, что их можно вызвать*. Объекты, которые можно вызвать, называют <code>Callable</code>-объектами. У них есть метод <code>__call__()</code>.</p>
-<p>* С точки зрения синтаксиса еще можно вызывать классы</p>
+<h2 id="Целые-числа">Целые числа<a class="anchor-link" href="#%D0%A6%D0%B5%D0%BB%D1%8B%D0%B5-%D1%87%D0%B8%D1%81%D0%BB%D0%B0">¶</a></h2><p>TBD</p>
 
 </div>
 </div>
@@ -13114,7 +13100,16 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Как-определить-функцию">Как определить функцию<a class="anchor-link" href="#%D0%9A%D0%B0%D0%BA-%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D1%8C-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8E">¶</a></h3>
+<h2 id="Числа-с-плавающей-точкой">Числа с плавающей точкой<a class="anchor-link" href="#%D0%A7%D0%B8%D1%81%D0%BB%D0%B0-%D1%81-%D0%BF%D0%BB%D0%B0%D0%B2%D0%B0%D1%8E%D1%89%D0%B5%D0%B9-%D1%82%D0%BE%D1%87%D0%BA%D0%BE%D0%B9">¶</a></h2><p><a href="https://en.wikipedia.org/wiki/IEEE_754">Стандарт IEEE 754</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Округления">Округления<a class="anchor-link" href="#%D0%9E%D0%BA%D1%80%D1%83%D0%B3%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F">¶</a></h3><p>Есть разные стратегии округления чисел с плавающей точкой.</p>
+
 </div>
 </div>
 </div>
@@ -13123,260 +13118,105 @@ div#notebook {
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Функция определяется таким синтаксисом</span>
-<span class="k">def</span> <span class="nf">plus_one</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">"""Функция возвращает увеличенное на 1 целое число"""</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Это избыточное определение. Из избыточного здесь использованы:</p>
-<ul>
-<li>строка документирования — <code>docstring</code>,</li>
-<li>и анотация функции.</li>
-</ul>
-<p>На самом деле можно описать эту же функцию компактней.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Функция plus_one без анотаций и документации</span>
-<span class="k">def</span> <span class="nf">plus_one_simple</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">round_trunc</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="n">n</span>
+        <span class="k">return</span> <span class="n">round_trunc</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">m</span><span class="p">)</span><span class="o">/</span><span class="n">m</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Функция-как-объект">Функция как объект<a class="anchor-link" href="#%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F-%D0%BA%D0%B0%D0%BA-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Как у любого объекта в python, у функции есть:</p>
-<ul>
-<li>идентификатор,</li>
-<li>тип.</li>
-</ul>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># У функции plus_one эти параметры выглядят так</span>
-<span class="nb">id</span><span class="p">(</span><span class="n">plus_one</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">plus_one</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">round_up</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="n">n</span>
+        <span class="k">return</span> <span class="n">round_up</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">m</span><span class="p">)</span><span class="o">/</span><span class="n">m</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(140144394334992, function)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>В CPython идентификатор — <strong>адрес объекта</strong> в виртуальной памяти</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Идентификатор в шестнадцатиричном формате — адрес функции plus_one</span>
-<span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">plus_one</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">round_down</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="n">n</span>
+        <span class="k">return</span> <span class="n">round_down</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">m</span><span class="p">)</span><span class="o">/</span><span class="n">m</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>'0x7f75e8d77310'</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Все атрибуты и методы функции как объекта можно посмотреть:</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">inspect</span>
-<span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">"__globals__"</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getmembers</span><span class="p">(</span><span class="n">plus_one</span><span class="p">))))</span>
-<span class="c1"># Здесь мы выбросили поле "__globals__", чтобы не засорять вывод</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">round_half_away_from_zero</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="o">.</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">round_half_away_from_zero</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="n">n</span>
+        <span class="k">return</span> <span class="n">round_half_away_from_zero</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">m</span><span class="p">)</span><span class="o">/</span><span class="n">m</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[('__annotations__', {'x': int, 'return': int}),
- ('__call__',
-  &lt;method-wrapper '__call__' of function object at 0x7f75e8d77310&gt;),
- ('__class__', function),
- ('__closure__', None),
- ('__code__',
-  &lt;code object plus_one at 0x7f75e8d642f0, file "&lt;ipython-input-1-188af9b6c882&gt;", line 2&gt;),
- ('__defaults__', None),
- ('__delattr__',
-  &lt;method-wrapper '__delattr__' of function object at 0x7f75e8d77310&gt;),
- ('__dict__', {}),
- ('__dir__', &lt;function function.__dir__()&gt;),
- ('__doc__', 'Функция возвращает увеличенное на 1 целое число'),
- ('__eq__', &lt;method-wrapper '__eq__' of function object at 0x7f75e8d77310&gt;),
- ('__format__', &lt;function function.__format__(format_spec, /)&gt;),
- ('__ge__', &lt;method-wrapper '__ge__' of function object at 0x7f75e8d77310&gt;),
- ('__get__', &lt;method-wrapper '__get__' of function object at 0x7f75e8d77310&gt;),
- ('__getattribute__',
-  &lt;method-wrapper '__getattribute__' of function object at 0x7f75e8d77310&gt;),
- ('__gt__', &lt;method-wrapper '__gt__' of function object at 0x7f75e8d77310&gt;),
- ('__hash__',
-  &lt;method-wrapper '__hash__' of function object at 0x7f75e8d77310&gt;),
- ('__init__',
-  &lt;method-wrapper '__init__' of function object at 0x7f75e8d77310&gt;),
- ('__init_subclass__', &lt;function function.__init_subclass__&gt;),
- ('__kwdefaults__', None),
- ('__le__', &lt;method-wrapper '__le__' of function object at 0x7f75e8d77310&gt;),
- ('__lt__', &lt;method-wrapper '__lt__' of function object at 0x7f75e8d77310&gt;),
- ('__module__', '__main__'),
- ('__name__', 'plus_one'),
- ('__ne__', &lt;method-wrapper '__ne__' of function object at 0x7f75e8d77310&gt;),
- ('__new__', &lt;function function.__new__(*args, **kwargs)&gt;),
- ('__qualname__', 'plus_one'),
- ('__reduce__', &lt;function function.__reduce__()&gt;),
- ('__reduce_ex__', &lt;function function.__reduce_ex__(protocol, /)&gt;),
- ('__repr__',
-  &lt;method-wrapper '__repr__' of function object at 0x7f75e8d77310&gt;),
- ('__setattr__',
-  &lt;method-wrapper '__setattr__' of function object at 0x7f75e8d77310&gt;),
- ('__sizeof__', &lt;function function.__sizeof__()&gt;),
- ('__str__', &lt;method-wrapper '__str__' of function object at 0x7f75e8d77310&gt;),
- ('__subclasshook__', &lt;function function.__subclasshook__&gt;)]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Как-вызвать-функцию">Как вызвать функцию<a class="anchor-link" href="#%D0%9A%D0%B0%D0%BA-%D0%B2%D1%8B%D0%B7%D0%B2%D0%B0%D1%82%D1%8C-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8E">¶</a></h3>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  Вызов функции, ожидаем ответ 2</span>
-<span class="n">plus_one</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Banker's Rounding</span>
+<span class="k">def</span> <span class="nf">round_half_to_even</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="o">.</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">round_half_to_even</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="n">n</span>
+        <span class="k">return</span> <span class="n">round_half_to_even</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">m</span><span class="p">)</span><span class="o">/</span><span class="n">m</span>
+    <span class="n">fx</span><span class="p">,</span> <span class="n">ix</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">modf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># части после и до запято</span>
+    <span class="k">if</span> <span class="n">math</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ix</span><span class="o">+</span><span class="mi">1</span> <span class="k">if</span> <span class="n">ix</span><span class="o">%</span><span class="k">2</span> else ix
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">round_half_away_from_zero</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13386,31 +13226,10 @@ div#notebook {
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  Можно явно вызвать метод call, ожидаем ответ 2</span>
-<span class="n">plus_one</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">round_funcs</span> <span class="o">=</span> <span class="p">(</span><span class="n">round_trunc</span><span class="p">,</span> <span class="n">round_up</span><span class="p">,</span> <span class="n">round_down</span><span class="p">,</span> <span class="n">round_half_away_from_zero</span><span class="p">,</span> <span class="n">round_half_to_even</span><span class="p">,</span> <span class="nb">round</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13418,7 +13237,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Как-функции-устроены">Как функции устроены<a class="anchor-link" href="#%D0%9A%D0%B0%D0%BA-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8-%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D1%8B">¶</a></h3>
+<p>Для произвольного положительного числа:</p>
+
 </div>
 </div>
 </div>
@@ -13427,8 +13247,9 @@ div#notebook {
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Байт-код функции function_name</span>
-<span class="n">plus_one</span><span class="o">.</span><span class="vm">__code__</span><span class="o">.</span><span class="n">co_code</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">round_funcs</span><span class="p">:</span>
+    <span class="n">arg</span> <span class="o">=</span> <span class="mf">123.3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">'</span><span class="si">{func.__name__}</span><span class="s1">(</span><span class="si">{arg}</span><span class="s1">): {func(arg)}'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13441,29 +13262,40 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>b'|\x00d\x01\x17\x00S\x00'</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>round_trunc(123.3): 123
+round_up(123.3): 124
+round_down(123.3): 123
+round_half_away_from_zero(123.3): 123
+round_half_to_even(123.3): 123
+round(123.3): 123
+</pre>
+</div>
 </div>
 
 </div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Для произвольного отрицательного числа:</p>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Дизассемблированное тело функции function_name</span>
-<span class="kn">import</span> <span class="nn">dis</span>
-<span class="n">dis</span><span class="o">.</span><span class="n">dis</span><span class="p">(</span><span class="n">plus_one</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">round_funcs</span><span class="p">:</span>
+    <span class="n">arg</span> <span class="o">=</span> <span class="o">-</span><span class="mf">123.3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">'</span><span class="si">{func.__name__}</span><span class="s1">(</span><span class="si">{arg}</span><span class="s1">): {func(arg)}'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13480,10 +13312,12 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>  4           0 LOAD_FAST                0 (x)
-              2 LOAD_CONST               1 (1)
-              4 BINARY_ADD
-              6 RETURN_VALUE
+<pre>round_trunc(-123.3): -123
+round_up(-123.3): -122
+round_down(-123.3): -123
+round_half_away_from_zero(-123.3): -123
+round_half_to_even(-123.3): -123
+round(-123.3): -123
 </pre>
 </div>
 </div>
@@ -13491,213 +13325,53 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Если заглянуть во внутренности интерпретатора (CPython), то функция описывается следующей струтурой: <a href="https://github.com/python/cpython/blob/3.7/Include/funcobject.h">https://github.com/python/cpython/blob/3.7/Include/funcobject.h</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Почитать">Почитать<a class="anchor-link" href="#%D0%9F%D0%BE%D1%87%D0%B8%D1%82%D0%B0%D1%82%D1%8C">¶</a></h3><ol>
-<li><a href="https://docs.python.org/3/reference/datamodel.html#objects-values-and-types">The Python Language Reference. Data model</a></li>
-<li><a href="https://docs.python.org/3/library/inspect.html">The Python Language Reference. Inspect live objects</a></li>
-<li><a href="https://www.python.org/dev/peps/pep-3107/">PEP 3107 -- Function Annotations</a></li>
-<li><a href="https://www.python.org/dev/peps/pep-0257/">PEP 257 -- Docstring Conventions</a></li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.-Вложенные-функции">2. Вложенные функции<a class="anchor-link" href="#2.-%D0%92%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8">¶</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Вложенная функция</strong> — функция, которая определена внутри другой функции.</p>
-<p>При работе с вложенными функциями надо учитывать области видимости.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Область-видимости-в-Python-—-LEGB">Область видимости в Python — LEGB<a class="anchor-link" href="#%D0%9E%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-%D0%B2%D0%B8%D0%B4%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8-%D0%B2-Python-%E2%80%94-LEGB">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>В Python есть 4 области видимости. Расположены они как показано на рисунке.</p>
-<p><img src="data:image/png;base64,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" alt="title"></p>
-<p>Стрелки на рисунке показывают в какой последовательности Python обходит области видимости. Следующий код показывает как распределены области относительно вложенной функции inner.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># (built-in) — область системных имен</span>
-
-<span class="c1"># global — область модуля</span>
-<span class="k">def</span> <span class="nf">outer</span><span class="p">():</span>
-    <span class="c1"># enclosed — область функции-обёртки </span>
-    <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
-        <span class="c1"># local — область внутри функции</span>
-        <span class="k">pass</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">round_funcs</span><span class="p">:</span>
+    <span class="n">arg</span> <span class="o">=</span> <span class="o">-</span><span class="mf">123.7</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">'</span><span class="si">{func.__name__}</span><span class="s1">(</span><span class="si">{arg}</span><span class="s1">): {func(arg)}'</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>round_trunc(-123.7): -123
+round_up(-123.7): -123
+round_down(-123.7): -124
+round_half_away_from_zero(-123.7): -124
+round_half_to_even(-123.7): -124
+round(-123.7): -124
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Зачем-нужны-вложенные-функции?">Зачем нужны вложенные функции?<a class="anchor-link" href="#%D0%97%D0%B0%D1%87%D0%B5%D0%BC-%D0%BD%D1%83%D0%B6%D0%BD%D1%8B-%D0%B2%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8?">¶</a></h3>
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Зачем это может быть нужно? Можно выделить 3 примера:</p>
-<ol>
-<li>чтобы скрыть функцию в глобальной области видимости,</li>
-<li>чтобы вынести «лишний» код из функцию в обёртку,</li>
-<li>чтобы реализовать замыкания (см. следующий раздел).</li>
-</ol>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Пример-1.-Чтобы-скрыть-функцию-— инкапсуляция">Пример 1. Чтобы скрыть функцию — инкапсуляция<a class="anchor-link" href="#%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80-1.-%D0%A7%D1%82%D0%BE%D0%B1%D1%8B-%D1%81%D0%BA%D1%80%D1%8B%D1%82%D1%8C-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8E-%E2%80%94%C2%A0%D0%B8%D0%BD%D0%BA%D0%B0%D0%BF%D1%81%D1%83%D0%BB%D1%8F%D1%86%D0%B8%D1%8F">¶</a></h4>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Вложенная функция inner внутри plus_one_outer</span>
-<span class="k">def</span> <span class="nf">plus_one_outer</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">"""Функция возвращает увеличенное на 1 целое число"""</span>
-    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">y</span><span class="p">):</span> <span class="k">return</span> <span class="n">y</span><span class="o">+</span><span class="mi">1</span>
-    <span class="k">return</span> <span class="n">inner</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  Вызов функции, ожидаем ответ 2</span>
-<span class="n">plus_one_outer</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Вложенная функция недоступна (должна быть ошибка)</span>
-<span class="n">inner</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-13-9439a6ed8a3c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Вложенная функция недоступна (должна быть ошибка)</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>inner<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'inner' is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Вложенные функции дают накладные расходы</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">dis</span>
-<span class="n">dis</span><span class="o">.</span><span class="n">dis</span><span class="p">(</span><span class="n">plus_one_outer</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">round_funcs</span><span class="p">:</span>
+    <span class="n">arg</span> <span class="o">=</span> <span class="mf">123.5</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">'</span><span class="si">{func.__name__}</span><span class="s1">(</span><span class="si">{arg}</span><span class="s1">): {func(arg)}'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13714,21 +13388,12 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>  4           0 LOAD_CONST               1 (&lt;code object inner at 0x7f75e851fc90, file "&lt;ipython-input-11-c887b5072665&gt;", line 4&gt;)
-              2 LOAD_CONST               2 ('plus_one_outer.&lt;locals&gt;.inner')
-              4 MAKE_FUNCTION            0
-              6 STORE_FAST               1 (inner)
-
-  5           8 LOAD_FAST                1 (inner)
-             10 LOAD_FAST                0 (x)
-             12 CALL_FUNCTION            1
-             14 RETURN_VALUE
-
-Disassembly of &lt;code object inner at 0x7f75e851fc90, file "&lt;ipython-input-11-c887b5072665&gt;", line 4&gt;:
-  4           0 LOAD_FAST                0 (y)
-              2 LOAD_CONST               1 (1)
-              4 BINARY_ADD
-              6 RETURN_VALUE
+<pre>round_trunc(123.5): 123
+round_up(123.5): 124
+round_down(123.5): 123
+round_half_away_from_zero(123.5): 124
+round_half_to_even(123.5): 124.0
+round(123.5): 124
 </pre>
 </div>
 </div>
@@ -13740,1027 +13405,9 @@ Disassembly of &lt;code object inner at 0x7f75e851fc90, file "&lt;ipython-input-
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Пример-2.-Чтобы-вынести-«лишний»-код-из-функции-в-обёртку">Пример 2. Чтобы вынести «лишний» код из функции в обёртку<a class="anchor-link" href="#%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80-2.-%D0%A7%D1%82%D0%BE%D0%B1%D1%8B-%D0%B2%D1%8B%D0%BD%D0%B5%D1%81%D1%82%D0%B8-%C2%AB%D0%BB%D0%B8%D1%88%D0%BD%D0%B8%D0%B9%C2%BB-%D0%BA%D0%BE%D0%B4-%D0%B8%D0%B7-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8-%D0%B2-%D0%BE%D0%B1%D1%91%D1%80%D1%82%D0%BA%D1%83">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="sd">"""Функция вычисляет факториал целого числа"""</span>
-    <span class="k">def</span> <span class="nf">calc_factorial</span><span class="p">(</span><span class="n">y</span><span class="p">):</span> <span class="k">return</span> <span class="n">y</span> <span class="o">*</span> <span class="n">calc_factorial</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span><span class="o">!=</span><span class="mi">0</span> <span class="k">else</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="k">return</span> <span class="n">calc_factorial</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>24</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.-Замыкания">3. Замыкания<a class="anchor-link" href="#3.-%D0%97%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F">¶</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Замыкание</strong> — вложенная функция, которая запоминает значения окружения, с которым она была вызвана. Говорят, что функция «замыкается» на значения переменных окружения. По сути это техника параметризированной генерации функций.</p>
-<p>Рассмотрим простой пример замыкания</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Функция-обёртка принимает возвращает внутренную функцию, которая «замкнута» на значение a</span>
-<span class="k">def</span> <span class="nf">gen_mul</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
-    <span class="k">return</span> <span class="n">inner</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># gen_mul возвращает функцию, которая будет всегда умножать на 2</span>
-<span class="n">double</span> <span class="o">=</span> <span class="n">gen_mul</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Проверим (должно быть 6)</span>
-<span class="n">double</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>6</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Можно возвращаемую функцию не сохранять</span>
-<span class="n">gen_mul</span><span class="p">(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>6</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Функции, которые возвращают другие функции, называются <strong>«фабриками функций»</strong>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Проблема-late-binding">Проблема late binding<a class="anchor-link" href="#%D0%9F%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0-late-binding">¶</a></h4><p>В замыканиях все переменные внутри вложенной функции вычисляются в момент её вызова, а не создания. Это называется позднее связывание (англ. <a href="https://en.wikipedia.org/wiki/Late_binding">late binding</a>). Из-за него могут возникнуть проблемы, как в примере ниже.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Проблема с late binding</span>
-<span class="n">powers</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">i</span>
-    <span class="n">powers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inner</span><span class="p">)</span>
-    
-<span class="c1"># Хотим получить список степеней 5-ки</span>
-<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">powers</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>25
-25
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Вместо ожидаемых двух степеней 5-ки получи два раза возведение в последнюю степень из списка. Это происходит из-за того, что в момент вызова <code>p(5)</code> в теле функции переменная i «смотрит» на последнее своё значение, т. е. 2.</p>
-<p>Это можно исправить, если создавать копии <code>i</code> при создании замыканий. Это можно сделать с помощью обёртки. При каждом вызове функции параметры указывают на значения аргументов функции. Поэтому замыкания «замыкаются» на текущие значения счётчика.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Решение проблемы late binding через обёртку (здесь make_inner)</span>
-<span class="n">powers</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">make_inner</span><span class="p">(</span><span class="n">j</span><span class="p">):</span>
-        <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">j</span>
-        <span class="k">return</span> <span class="n">inner</span>
-    <span class="n">powers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">make_inner</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-    
-<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">powers</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-25
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Другое решение — использовать тот факт, что значения параметров по-умолчанию вычисляются при создании функции.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Решение проблемы late binding через стандарное знаечение аргумента функции</span>
-<span class="n">powers</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">i</span>
-    <span class="n">powers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">inner</span><span class="p">)</span>
-    
-<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">powers</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-25
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.-Декораторы">4. Декораторы<a class="anchor-link" href="#4.-%D0%94%D0%B5%D0%BA%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B">¶</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Декоратор</strong> — «синтаксический сахар» для функции-обёртки вокруг другой функции. Обычно декоратор используют, чтобы добавить новое поведение другой функции без изменения ее тела.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Возьмем простую функцию возведения в квадрат</span>
-<span class="k">def</span> <span class="nf">sqr</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
-<span class="n">sqr</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[24]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>25</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Пример-элементарного-декоратора">Пример элементарного декоратора<a class="anchor-link" href="#%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B4%D0%B5%D0%BA%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Мы хотим обёрнуть функцию возведения в квадрат другой функцией, чтобы добавить новые возможности.
-Ниже приведен пример фабрики функций, которая возвращает функцию-обёртку. Эта функция-обёртка выполняет новый код
-и вызывает оборачивемую функцию.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">perf_counter_ns</span>
-
-<span class="c1"># Фабрика функций, которая генерирует обернутые функции func для отладки вызова и результата</span>
-<span class="k">def</span> <span class="nf">make_debugable</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"[DEBUG] Launch function </span><span class="si">{func}</span><span class="s2"> with x=</span><span class="si">{x}</span><span class="s2">"</span><span class="p">)</span>
-        <span class="n">start_time_ns</span> <span class="o">=</span> <span class="n">perf_counter_ns</span><span class="p">()</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">stop_time_ns</span> <span class="o">=</span> <span class="n">perf_counter_ns</span><span class="p">()</span>
-        <span class="n">duration_ns</span> <span class="o">=</span> <span class="n">stop_time_ns</span><span class="o">-</span><span class="n">start_time_ns</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"[DEBUG] Time: </span><span class="si">{duration_ns}</span><span class="s2">ns"</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">result</span>
-    <span class="k">return</span> <span class="n">wrapper</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Обернём функцию sqr, сгенерированное значение будем хранить в sqrt2.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sqrt2</span> <span class="o">=</span> <span class="n">make_debugable</span><span class="p">(</span><span class="n">sqr</span><span class="p">)</span>
-<span class="n">sqrt2</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[DEBUG] Launch function &lt;function sqr at 0x7f75e84a69d0&gt; with x=5
-[DEBUG] Time: 11200ns
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[26]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>25</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Синтаксический сахар декораторов позволяет описать такое поведение короче. При этом декоратор генерирует обёрнутую функцию с таким же именем как у обораичиваемой.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Следующий код эквивалентен: sqr3 = make_debugable(sqr3)</span>
-<span class="nd">@make_debugable</span>
-<span class="k">def</span> <span class="nf">sqr3</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
-
-<span class="n">sqr3</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[DEBUG] Launch function &lt;function sqr3 at 0x7f75e8539820&gt; with x=4
-[DEBUG] Time: 12900ns
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[27]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>16</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Практичный-пример-применения-декоратора-make_debugable">Практичный пример применения декоратора <code>make_debugable</code><a class="anchor-link" href="#%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B4%D0%B5%D0%BA%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0-make_debugable">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Сравним скорость работы встроенной функции <code>sum</code> с написанной «руками» с помощью декоратора <code>make_debugable</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@make_debugable</span>
-<span class="k">def</span> <span class="nf">sum_1</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">"""Суммирование чисел от 1 до n в цикле for"""</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="n">i</span>
-    <span class="k">return</span> <span class="n">s</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@make_debugable</span>
-<span class="k">def</span> <span class="nf">sum_2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">"""Суммирование чисел от 1 до n встроенной функцией"""</span>
-    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sum_1</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[DEBUG] Launch function &lt;function sum_1 at 0x7f75e85399d0&gt; with x=10000
-[DEBUG] Time: 1849400ns
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[30]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>49995000</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sum_2</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[DEBUG] Launch function &lt;function sum_2 at 0x7f75e844b310&gt; with x=10000
-[DEBUG] Time: 437100ns
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[31]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>49995000</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Наглядно видно, что встроенная функция производительней.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Пример-рабочего-декоратора">Пример рабочего декоратора<a class="anchor-link" href="#%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B3%D0%BE-%D0%B4%D0%B5%D0%BA%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>По сути декоратор возвращает другую функцию. Если проверить документацию к функции:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Проверка справки (не должен вернуть строку)</span>
-<span class="n">help</span><span class="p">(</span><span class="n">sum_1</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Help on function wrapper in module __main__:
-
-wrapper(x)
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Чтобы возвращаемая функция была похожа на оборачиваемую надо скопировать внутренние атрибуты.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [33]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">wraps</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">perf_counter_ns</span>
-
-<span class="c1"># Улучшенная фабрика функций, которая генерирует обернутые функции func для отладки вызова и результата</span>
-<span class="k">def</span> <span class="nf">make_debugable_real</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span> <span class="c1"># Декоратор из библиотеки для копирования внутренних атрибутов</span>
-    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"[DEBUG] Launch function </span><span class="si">{func}</span><span class="s2"> with x=</span><span class="si">{x}</span><span class="s2">"</span><span class="p">)</span>
-        <span class="n">start_time_ns</span> <span class="o">=</span> <span class="n">perf_counter_ns</span><span class="p">()</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">stop_time_ns</span> <span class="o">=</span> <span class="n">perf_counter_ns</span><span class="p">()</span>
-        <span class="n">duration_ns</span> <span class="o">=</span> <span class="n">stop_time_ns</span><span class="o">-</span><span class="n">start_time_ns</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"[DEBUG] Time: </span><span class="si">{duration_ns}</span><span class="s2">ns"</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">result</span>
-    <span class="k">return</span> <span class="n">wrapper</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@make_debugable_real</span>
-<span class="k">def</span> <span class="nf">sum_3</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">"""Суммирование чисел от 1 до n встроенной функцией"""</span>
-    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [35]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Проверка справки (теперь должен вернуть строку)</span>
-<span class="n">help</span><span class="p">(</span><span class="n">sum_3</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Help on function sum_3 in module __main__:
-
-sum_3(n)
-    Суммирование чисел от 1 до n встроенной функцией
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Пример-рабочего-декоратора-с-параметрами">Пример рабочего декоратора с параметрами<a class="anchor-link" href="#%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B3%D0%BE-%D0%B4%D0%B5%D0%BA%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0-%D1%81-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0%D0%BC%D0%B8">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Чтобы декоратор принимал аргументы, надо сформировать замыкание фабрики обёрток с параметром декоратора.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [36]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">wraps</span>
-
-<span class="c1"># Фабрика генераторов функций, которая позволяет использовать параметры, функция умножает результат функции на число.</span>
-<span class="k">def</span> <span class="nf">mul</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span> <span class="c1"># Упаковали параметры (см. ниже)</span>
-            <span class="k">return</span> <span class="n">p</span><span class="o">*</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="c1"># Распаковали параметры обратно (см. ниже)</span>
-        <span class="k">return</span> <span class="n">wrapper</span>
-    <span class="k">return</span> <span class="n">decorator</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Объявим функцию с двумя декораторами. Декораторы применяются последовательнос снизу вверх.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [37]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@mul</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="nd">@mul</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Должно быть 24 так как 2(4(1+2)) = 24</span>
-<span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[38]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>24</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Упаковка-и-распаковка-параметров">Упаковка и распаковка параметров<a class="anchor-link" href="#%D0%A3%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B8-%D1%80%D0%B0%D1%81%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%BE%D0%B2">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>При работе с последовательностями можно собирать значения в переменные. Это называется <strong>упаковка</strong>. Синтаксис такой.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [39]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>В <code>b</code> теперь список всего того, что не попало в <code>a</code> и <code>c</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [40]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[7, 5, 6, 3, 4]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Эти значения можно подставить используя <strong>распаковку</strong>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [41]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>7 5 6 3 4
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Результат вывода разный. В первом случае вызов эквивалентен <code>print([b1, b2, b3])</code>, во втором — <code>print(b1, b2, b3)</code>.</p>
-<p><strong>NB!</strong> Упаковка и распоковка доступна и для словарей. Для этого используется **.</p>
+<h3 id="Почитать">Почитать<a class="anchor-link" href="#%D0%9F%D0%BE%D1%87%D0%B8%D1%82%D0%B0%D1%82%D1%8C">¶</a></h3><ol>
+<li><a href="https://www.eetimes.com/document.asp?doc_id=1274515">Rounding Algorithms 101 Redux</a></li>
+</ol>
 
 </div>
 </div>
@@ -14774,7 +13421,7 @@ sum_3(n)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [42]:</div>
+<div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
@@ -14795,9 +13442,9 @@ sum_3(n)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>last updated: 2019-10-21 
+<pre>last updated: 2019-08-31 
 
-CPython 3.8.0
+CPython 3.7.4
 IPython 7.8.0
 </pre>
 </div>
