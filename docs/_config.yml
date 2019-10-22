@@ -1,1 +1,5 @@
 theme: jekyll-theme-minimal
+title: Python Bar Review
+description: Python Language Notes in Russian
+show_downloads: false
+logo: https://github.com/ckorikov/python-bar-review/raw/master/img/promo.png
