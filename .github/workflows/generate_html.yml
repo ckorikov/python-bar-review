@@ -1,0 +1,32 @@
+name: Generate html
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.7.4'
+        architecture: 'x64'
+    - name: Install pipenv
+      run: pip install pipenv
+    - name: Install requirements
+      run:
+        pipenv install
+    - name: Install jupyter_contrib_nbextensions
+      run:
+        pipenv install jupyter_contrib_nbextensions
+    - name: Enable jupyter_contrib_nbextensions
+      run:
+        pipenv jupyter contrib nbextension install --user
+    - name: Generate html
+      run:
+        for i in *.ipynb; do pipenv jupyter nbconvert --to html_embed $i; done
+    - name: Move html to docks
+      run:
+        mv *.html docs
