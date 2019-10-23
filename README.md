@@ -16,6 +16,7 @@
 В работе:
 
 - [ ] [Конкурентное программирование — WIP](05-concurrency.ipynb)
+- [ ] [Моржовый оператор и новинки python 3.8 — WIP](06-walrus_operator_and_3p8.ipynb)
 - [ ] [Алгоритмы. Числа — WIP](xx-algorithms-numbers.ipynb)
 - [ ] [Алгоритмы. ML — WIP](xx-algorithms-machine_learning.ipynb)
 
