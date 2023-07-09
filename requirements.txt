@@ -4,3 +4,5 @@ matplotlib
 seaborn
 watermark
 jupyterlab
+jax
+torch 
