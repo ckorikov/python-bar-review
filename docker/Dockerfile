@@ -1,13 +1,11 @@
 FROM python:3.8
 
 WORKDIR /python_bar_review
-COPY ./Pipfile Pipfile
-COPY ./Pipfile.lock Pipfile.lock
+COPY ./requirements.txt requirements.txt
 
 RUN apt-get update -y && apt-get install python3-pip -y && pip3 install pip --upgrade && apt-get clean
 RUN apt-get install -y  gcc gfortran python-dev libopenblas-dev liblapack-dev cython
-RUN pip install pipenv
-RUN pipenv install --system
+RUN pip install -r requirements.txt
 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs
