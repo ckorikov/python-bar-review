@@ -28,17 +28,15 @@
 
 ## Установка
 
-Чтобы установить все зависимости, сначала выполните из корня репозитория
-команду
-
+Используйте `pip` для установки зависимостей
 ```shell
-pipenv install
+pip install -r requirements.txt
 ```
 
 затем запустите Jupyter Lab.
 
 ```shell
-pipenv run jupyter lab
+jupyter lab
 ```
 
 Альтернативный вариант — использовать [docker](https://www.docker.com).
