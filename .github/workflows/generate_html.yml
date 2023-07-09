@@ -11,22 +11,22 @@ jobs:
     - uses: actions/checkout@v1
     - uses: actions/setup-python@v1
       with:
-        python-version: '3.7.4'
+        python-version: '3.10.12'
         architecture: 'x64'
     - name: Install pipenv
       run: pip install pipenv
     - name: Install requirements
       run:
-        pipenv install
+        pip install -r requirements.txt
     - name: Install jupyter_contrib_nbextensions
       run:
-        pipenv install jupyter_contrib_nbextensions
+        pip install jupyter_contrib_nbextensions
     - name: Enable jupyter_contrib_nbextensions
       run:
-        pipenv jupyter contrib nbextension install --user
+        jupyter contrib nbextension install --user
     - name: Generate html
       run:
-        for i in *.ipynb; do pipenv jupyter nbconvert --to html_embed $i; done
+        for i in *.ipynb; do jupyter nbconvert --to html_embed $i; done
     - name: Move html to docks
       run:
         mv *.html docs
