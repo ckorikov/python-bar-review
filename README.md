@@ -12,13 +12,16 @@
 2. [Итераторы, генераторы и функциональное программирование](02-iterators-generators-functional_programming.ipynb)
 3. [Контейнеры 1](03-containers-1.ipynb)
 4. [Контейнеры 2](04-containers-2.ipynb)
+5. WIP
+6. WIP
+7. [Машинное обучение в функциональном стиле](07-ml-in-functional-style.ipynb)
 
 В работе:
 
 - [ ] [Конкурентное программирование — WIP](05-concurrency.ipynb)
 - [ ] [Моржовый оператор и новинки python 3.8 — WIP](06-walrus_operator_and_3p8.ipynb)
 - [ ] [Алгоритмы. Числа — WIP](xx-algorithms-numbers.ipynb)
-- [ ] [Алгоритмы. ML — WIP](xx-algorithms-machine_learning.ipynb)
+
 
 ## Идеи для занятий (файл может меняться)
 
