@@ -6,6 +6,6 @@ watermark
 jupyterlab
 torch 
 scikit-learn
-# jax[cpu] change depending on the available hardware 
+jax[cpu] # change depending on the available hardware 
 # for mac: https://developer.apple.com/forums/thread/731465?answerId=756330022#756330022
 flax
