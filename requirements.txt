@@ -4,3 +4,5 @@ matplotlib
 seaborn
 watermark
 jupyterlab
+jax[cpu] # change depending on the available hardware
+torch 
